@@ -1,4 +1,6 @@
 import React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMapPin, faClockRotateLeft, faCalendarCheck, faWind } from '@fortawesome/free-solid-svg-icons'
 
 import "./CurrentWeatherWrapper.css";
 
@@ -16,21 +18,21 @@ export default function CurrentWeatherWrapper() {
   return (
     <div className="CurrentWeatherWrapper">
       <h1>
-        <i className="fa-solid fa-map-pin"></i> {weatherData.city}
+        <FontAwesomeIcon icon={faMapPin} className="icon"/> {weatherData.city}
       </h1>
 
       <div className="row">
         <div className="col-4">
           <ul>
             <li>
-              <i className="fa-solid fa-clock-rotate-left"></i>{" "}
+              <FontAwesomeIcon icon={faClockRotateLeft} className="icon"/>{" "}
               {weatherData.day}, {weatherData.time}
             </li>
             <li>
-              <i className="fa-solid fa-calendar-check"></i> {weatherData.date}
+              <FontAwesomeIcon icon={faCalendarCheck} className="icon"/>{" "} {weatherData.date}
             </li>
             <li>
-              <i className="fa-solid fa-wind"></i> {weatherData.wind} m/s
+              <FontAwesomeIcon icon={faWind} className="icon"/>{" "} {weatherData.wind} m/s
             </li>
           </ul>
         </div>

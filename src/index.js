@@ -4,6 +4,7 @@ import reportWebVitals from './reportWebVitals';
 
 import "./Index.css";
 import 'bootstrap/dist/css/bootstrap.css';
+
 import SearchWrapper from "./SearchWrapper";
 import CurrentWeatherWrapper from "./CurrentWeatherWrapper";
 import ForecastWrapper from "./ForecastWrapper";

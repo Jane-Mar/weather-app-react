@@ -1,5 +1,8 @@
 import React from "react";
 import "./SearchWrapper.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLocation } from '@fortawesome/free-solid-svg-icons'
+import { faMagnifyingGlassLocation } from '@fortawesome/free-solid-svg-icons'
 
 export default function SearchWrapper() {
   return (
@@ -12,10 +15,10 @@ export default function SearchWrapper() {
           autoComplete="off"
         />
         <button className="location-btn" type="submit">
-          <i className="fa-solid fa-magnifying-glass-location"></i>
+        <FontAwesomeIcon icon={faMagnifyingGlassLocation} />       
         </button>
         <button className="location-btn" type="submit">
-          <i className="fa-solid fa-location-crosshairs"></i>
+        <FontAwesomeIcon icon={faLocation} />
         </button>
       </form>
     </div>
