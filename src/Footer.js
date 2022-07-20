@@ -6,7 +6,7 @@ export default function Footer() {
     <p>
       @2022{` `}
       <a
-        href="https://github.com/Jane-Mar/weather-app.git"
+        href="https://github.com/Jane-Mar/weather-app-react"
         rel="noreferrer"
         target="_blank"
       >
@@ -14,7 +14,7 @@ export default function Footer() {
       </a>
       , by Jane Marinina and {` `}
       <a
-        href="https://playful-churros-22749f.netlify.app/"
+        href="https://gentle-ganache-c9fa32.netlify.app/"
         rel="noreferrer"
         target="_blank"
       >
