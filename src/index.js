@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 
-
-import "./App.css";
+import "./Index.css";
+import 'bootstrap/dist/css/bootstrap.css';
 import SearchWrapper from "./SearchWrapper";
 import CurrentWeatherWrapper from "./CurrentWeatherWrapper";
 import ForecastWrapper from "./ForecastWrapper";
@@ -19,8 +19,6 @@ function App() {
     </div>
   );
 }
-
-
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
