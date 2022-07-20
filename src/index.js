@@ -1,8 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+
+
+import "./App.css";
+import SearchWrapper from "./SearchWrapper";
+import CurrentWeatherWrapper from "./CurrentWeatherWrapper";
+import ForecastWrapper from "./ForecastWrapper";
+import Footer from "./Footer";
+
+function App() {
+  return (
+    <div className="App">
+      <SearchWrapper />
+      <CurrentWeatherWrapper />
+      <ForecastWrapper />
+      <Footer />
+    </div>
+  );
+}
+
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

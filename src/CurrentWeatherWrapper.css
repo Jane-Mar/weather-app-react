@@ -1,0 +1,69 @@
+.CurrentWeatherWrapper {
+    border-radius: 15px;
+    box-shadow: 2px 2px 2px 2px #804d3b;
+    padding: 20px 10px;
+  }
+  
+  .CurrentWeatherWrapper h1 {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+  }
+  
+  .CurrentWeatherWrapper ul {
+    list-style: none;
+    display: block;
+    margin: 0;
+    padding: 20px 10px 0;
+  }
+  
+  .CurrentWeatherWrapper li {
+    font-size: 17px;
+    color: #804d3b;
+    padding: 5px 0;
+  }
+  
+  .CurrentWeatherWrapper p {
+    font-size: 12px;
+    text-align: center;
+  }
+  
+  .CurrentWeatherWrapper .today-temp {
+    text-align: right;
+    padding-right: 10px;
+    font-size: 60px;
+    font-weight: bold;
+  }
+  
+  .CurrentWeatherWrapper img {
+    max-width: 150px;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .CurrentWeatherWrapper .units {
+    position: relative;
+    top: -30px;
+    font-size: 18px;
+    color: #804d3b;
+    text-decoration: none;
+  }
+  
+  .CurrentWeatherWrapper a {
+    color: #804d3b;
+    text-decoration: none;
+    font-weight: lighter;
+  }
+  
+  .CurrentWeatherWrapper .description {
+    font-size: 20px;
+    color: #804d3b;
+    line-height: 1;
+    margin: 0 auto;
+  }
+  
+  .CurrentWeatherWrapper .description:first-letter {
+    text-transform: capitalize;
+  }
+  
