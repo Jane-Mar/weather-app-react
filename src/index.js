@@ -5,7 +5,6 @@ import reportWebVitals from './reportWebVitals';
 import "./Index.css";
 import 'bootstrap/dist/css/bootstrap.css';
 
-import SearchWrapper from "./SearchWrapper";
 import CurrentWeatherWrapper from "./CurrentWeatherWrapper";
 import ForecastWrapper from "./ForecastWrapper";
 import Footer from "./Footer";
@@ -14,7 +13,6 @@ function App() {
   return (
     <div className="container">
     <div className="App">
-      <SearchWrapper />
       <CurrentWeatherWrapper defaultCity="Porto"/>
       <ForecastWrapper />
       <Footer />
