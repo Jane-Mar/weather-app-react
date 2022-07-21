@@ -51,10 +51,11 @@
     color: #804d3b;
     text-decoration: none;
   }
+
   .WeatherDisplay .units .active {
     font-weight: bold;
   }
-  
+    
   .WeatherDisplay a {
     color: #804d3b;
     text-decoration: none;
