@@ -39,10 +39,10 @@
     font-weight: bold;
   }
   
-  .WeatherDisplay img {
-    max-width: 150px;
+  .WeatherDisplay canvas {
     display: block;
     margin: 0 auto;
+    
   }
   
   .WeatherDisplay .units {

@@ -2,6 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMapPin, faClockRotateLeft, faCalendarCheck, faWind } from '@fortawesome/free-solid-svg-icons'
 
+import WeatherImage from "./WeatherImage";
 import "./WeatherDisplay.css";
 
 export default function WeatherDisplay(props) {
@@ -42,8 +43,8 @@ export default function WeatherDisplay(props) {
     </ul>
   </div>
   <div className="col-4">
-    <img src={props.info.imageURL} alt={props.info.description} />
-  </div>
+    <WeatherImage code={props.info.imageCode} />
+      </div>
   <div className="col-4">
     <div className="today-temp">
       {props.info.temp}

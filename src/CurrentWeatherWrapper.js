@@ -7,6 +7,7 @@ import { FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import { faLocation, faMagnifyingGlassLocation  } from '@fortawesome/free-solid-svg-icons'
 import { Rings } from  'react-loader-spinner'
 
+
 export default function CurrentWeatherWrapper(props) {
   const [weather, setWeather] = useState();
   const [ready, setReady] = useState(false);
@@ -20,9 +21,8 @@ export default function CurrentWeatherWrapper(props) {
     wind: Math.round(response.data.wind.speed),
     description: response.data.weather[0].description,
     temp: Math.round(response.data.main.temp),
-    imageURL: "https://ssl.gstatic.com/onebox/weather/64/sunny.png"
-  
-  })};
+    imageCode: response.data.weather[0].icon,
+    })};
 
   function getWeather() {
     let apiKey = "fff7fbe34f6b248c3ba3dfbbe41d297f";
@@ -39,6 +39,10 @@ export default function CurrentWeatherWrapper(props) {
   function getCity(event) {
     setCity(event.target.value);
   }
+
+  // function currentLocation(event) {
+  //   setCity(event)
+  // }
   
   if (ready) {
   return  (
@@ -55,7 +59,7 @@ export default function CurrentWeatherWrapper(props) {
       <button className="location-btn" type="submit">
       <FontAwesomeIcon icon={faMagnifyingGlassLocation} />       
       </button>
-      <button className="location-btn" type="submit">
+      <button className="location-btn" type="submit" >
       <FontAwesomeIcon icon={faLocation} />
       </button>
     </form>
