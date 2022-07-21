@@ -12,15 +12,7 @@ export default function Footer() {
       >
         open-sourced
       </a>
-      , by Jane Marinina and {` `}
-      <a
-        href="https://gentle-ganache-c9fa32.netlify.app/"
-        rel="noreferrer"
-        target="_blank"
-      >
-        hosted
-      </a>
-      {` `} on Netlify
+      , by Jane Marinina      
     </p>
   );
 }

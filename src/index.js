@@ -1,9 +1,9 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import reportWebVitals from "./reportWebVitals";
 
 import "./Index.css";
-import 'bootstrap/dist/css/bootstrap.css';
+import "bootstrap/dist/css/bootstrap.css";
 
 import CurrentWeatherWrapper from "./CurrentWeatherWrapper";
 import ForecastWrapper from "./ForecastWrapper";
@@ -12,17 +12,16 @@ import Footer from "./Footer";
 function App() {
   return (
     <div className="container">
-    <div className="App">
-      <CurrentWeatherWrapper defaultCity="Porto"/>
-      <ForecastWrapper />
-      <Footer />
-    </div>
+      <div className="App">
+        <CurrentWeatherWrapper defaultCity="Porto" />
+        <ForecastWrapper />
+        <Footer />
+      </div>
     </div>
   );
 }
 
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <App />

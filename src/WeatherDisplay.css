@@ -1,76 +1,74 @@
 .WeatherDisplay {
-    border-radius: 15px;
-    box-shadow: 2px 2px 2px 2px #804d3b;
-    padding: 20px 10px;
-  }
-  
-  .WeatherDisplay h1 {
-    font-size: 50px;
-    font-weight: bold;
-    text-align: center;
-    line-height: 1;
-  }
-  
-  .WeatherDisplay ul {
-    list-style: none;
-    display: block;
-    margin: 0;
-    padding: 20px 10px 0;
-  }
-  
-  .WeatherDisplay li {
-    font-size: 17px;
-    color: #804d3b;
-    padding: 5px 0;
-  }
-  .WeatherDisplay .icon {
-       color: #1297bd;
-     }
-  
-  .WeatherDisplay p {
-    font-size: 12px;
-    text-align: center;
-  }
-  
-  .WeatherDisplay .today-temp {
-    text-align: right;
-    padding-right: 10px;
-    font-size: 60px;
-    font-weight: bold;
-  }
-  
-  .WeatherDisplay canvas {
-    display: block;
-    margin: 10px auto;
-  }
-  
-  .WeatherDisplay .units {
-    position: relative;
-    top: -30px;
-    font-size: 18px;
-    color: #804d3b;
-    text-decoration: none;
-  }
+  border-radius: 15px;
+  box-shadow: 2px 2px 2px 2px #804d3b;
+  padding: 20px 10px;
+}
 
-  .WeatherDisplay .units .active {
-    font-weight: bold;
-  }
-    
-  .WeatherDisplay a {
-    color: #804d3b;
-    text-decoration: none;
-    font-weight: lighter;
-  }
-  
-  .WeatherDisplay .description {
-    font-size: 20px;
-    color: #804d3b;
-    line-height: 1;
-    text-align: center;
-  }
-  
-  .WeatherDisplay .description:first-letter {
-    text-transform: capitalize;
-  }
+.WeatherDisplay h1 {
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1;
+}
 
-  
+.WeatherDisplay ul {
+  list-style: none;
+  display: block;
+  margin: 0;
+  padding: 20px 10px 0;
+}
+
+.WeatherDisplay li {
+  font-size: 17px;
+  color: #804d3b;
+  padding: 5px 0;
+}
+.WeatherDisplay .icon {
+  color: #1297bd;
+}
+
+.WeatherDisplay p {
+  font-size: 12px;
+  text-align: center;
+}
+
+.WeatherDisplay .today-temp {
+  text-align: right;
+  padding-right: 10px;
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.WeatherDisplay canvas {
+  display: block;
+  margin: 10px auto;
+}
+
+.WeatherDisplay .units {
+  position: relative;
+  top: -30px;
+  font-size: 18px;
+  color: #804d3b;
+  text-decoration: none;
+}
+
+.WeatherDisplay .units .active {
+  font-weight: bold;
+}
+
+.WeatherDisplay a {
+  color: #804d3b;
+  text-decoration: none;
+  font-weight: lighter;
+}
+
+.WeatherDisplay .description {
+  font-size: 20px;
+  color: #804d3b;
+  line-height: 1;
+  text-align: center;
+}
+
+.WeatherDisplay .description:first-letter {
+  text-transform: capitalize;
+}
