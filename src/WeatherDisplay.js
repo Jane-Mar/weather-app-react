@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMapPin, faClockRotateLeft, faCalendarCheck, faWind } from '@fortawesome/free-solid-svg-icons'
 
 import WeatherImage from "./WeatherImage";
+import UnitConvertion from "./UnitConvertion";
 import "./WeatherDisplay.css";
 
 export default function WeatherDisplay(props) {
@@ -25,9 +26,9 @@ export default function WeatherDisplay(props) {
 
   return (
     <div className="WeatherDisplay">
-    <h1>
-  <FontAwesomeIcon icon={faMapPin} className="icon"/> {props.info.city}
-</h1>
+    <h1> 
+      <FontAwesomeIcon icon={faMapPin} className="icon"/> {props.info.city}
+      </h1>
 <div className="row">
   <div className="col-4">
     <ul>
@@ -47,10 +48,7 @@ export default function WeatherDisplay(props) {
       </div>
   <div className="col-4">
     <div className="today-temp">
-      {props.info.temp}
-      <span className="units">
-        <a href="/"> °C </a> | <a href="/"> °F </a>
-      </span>
+      <UnitConvertion temp={props.info.temp}/>
     </div>
   </div>
   <div className="description">{props.info.description}</div>

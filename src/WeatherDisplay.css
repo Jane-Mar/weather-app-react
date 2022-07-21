@@ -41,8 +41,7 @@
   
   .WeatherDisplay canvas {
     display: block;
-    margin: 0 auto;
-    
+    margin: 10px auto;
   }
   
   .WeatherDisplay .units {
@@ -51,6 +50,9 @@
     font-size: 18px;
     color: #804d3b;
     text-decoration: none;
+  }
+  .WeatherDisplay .units .active {
+    font-weight: bold;
   }
   
   .WeatherDisplay a {
