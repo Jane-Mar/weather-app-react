@@ -1,51 +1,51 @@
-.CurrentWeatherWrapper {
+.WeatherDisplay {
     border-radius: 15px;
     box-shadow: 2px 2px 2px 2px #804d3b;
     padding: 20px 10px;
   }
   
-  .CurrentWeatherWrapper h1 {
+  .WeatherDisplay h1 {
     font-size: 50px;
     font-weight: bold;
     text-align: center;
     line-height: 1;
   }
   
-  .CurrentWeatherWrapper ul {
+  .WeatherDisplay ul {
     list-style: none;
     display: block;
     margin: 0;
     padding: 20px 10px 0;
   }
   
-  .CurrentWeatherWrapper li {
+  .WeatherDisplay li {
     font-size: 17px;
     color: #804d3b;
     padding: 5px 0;
   }
-  .CurrentWeatherWrapper .icon {
+  .WeatherDisplay .icon {
        color: #1297bd;
      }
   
-  .CurrentWeatherWrapper p {
+  .WeatherDisplay p {
     font-size: 12px;
     text-align: center;
   }
   
-  .CurrentWeatherWrapper .today-temp {
+  .WeatherDisplay .today-temp {
     text-align: right;
     padding-right: 10px;
     font-size: 60px;
     font-weight: bold;
   }
   
-  .CurrentWeatherWrapper img {
+  .WeatherDisplay img {
     max-width: 150px;
     display: block;
     margin: 0 auto;
   }
   
-  .CurrentWeatherWrapper .units {
+  .WeatherDisplay .units {
     position: relative;
     top: -30px;
     font-size: 18px;
@@ -53,24 +53,21 @@
     text-decoration: none;
   }
   
-  .CurrentWeatherWrapper a {
+  .WeatherDisplay a {
     color: #804d3b;
     text-decoration: none;
     font-weight: lighter;
   }
   
-  .CurrentWeatherWrapper .description {
+  .WeatherDisplay .description {
     font-size: 20px;
     color: #804d3b;
     line-height: 1;
     text-align: center;
   }
   
-  .CurrentWeatherWrapper .description:first-letter {
+  .WeatherDisplay .description:first-letter {
     text-transform: capitalize;
   }
 
-#icon {
-    color: #1297bd;
-  }
   

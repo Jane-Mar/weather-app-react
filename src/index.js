@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="App">
       <SearchWrapper />
-      <CurrentWeatherWrapper />
+      <CurrentWeatherWrapper defaultCity="Porto"/>
       <ForecastWrapper />
       <Footer />
     </div>

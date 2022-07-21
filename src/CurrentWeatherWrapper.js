@@ -1,54 +1,39 @@
-import React from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMapPin, faClockRotateLeft, faCalendarCheck, faWind } from '@fortawesome/free-solid-svg-icons'
+import React, {useState} from "react";
 
-import "./CurrentWeatherWrapper.css";
 
-export default function CurrentWeatherWrapper() {
-  let weatherData = {
-    city: "Porto",
+import axios from "axios";
+import WeatherDisplay from "./WeatherDisplay";
+
+export default function CurrentWeatherWrapper(props) {
+  const [weather, setWeather] = useState();
+  const [ready, setReady] = useState(false);
+
+  function hendleResponse(response) {
+    setReady(true);
+   setWeather({
+    city: response.data.name,
     date: "22/07/2022",
     day: "Tue",
     time: "15:40",
-    wind: "3",
-    description: "clear",
-    temp: "19",
+    wind: response.data.wind.speed,
+    description: response.data.weather[0].description,
+    temp: Math.round(response.data.main.temp),
     imageURL: "https://ssl.gstatic.com/onebox/weather/64/sunny.png"
-  };
-  return (
-    <div className="CurrentWeatherWrapper">
-      <h1>
-        <FontAwesomeIcon icon={faMapPin} className="icon"/> {weatherData.city}
-      </h1>
-
-      <div className="row">
-        <div className="col-4">
-          <ul>
-            <li>
-              <FontAwesomeIcon icon={faClockRotateLeft} className="icon"/>{" "}
-              {weatherData.day}, {weatherData.time}
-            </li>
-            <li>
-              <FontAwesomeIcon icon={faCalendarCheck} className="icon"/>{" "} {weatherData.date}
-            </li>
-            <li>
-              <FontAwesomeIcon icon={faWind} className="icon"/>{" "} {weatherData.wind} m/s
-            </li>
-          </ul>
-        </div>
-        <div className="col-4">
-          <img src={weatherData.imageURL} alt={weatherData.description} />
-        </div>
-        <div className="col-4">
-          <div className="today-temp">
-            {weatherData.temp}
-            <span className="units">
-              <a href="/"> °C </a> | <a href="/"> °F </a>
-            </span>
-          </div>
-        </div>
-        <div className="description">{weatherData.description}</div>
-      </div>
-    </div>
-  );
+  })};
+  
+  function getWeather() {
+    let apiKey = "fff7fbe34f6b248c3ba3dfbbe41d297f";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(hendleResponse);
+  }
+  
+  if (ready) {
+  return ( 
+    <WeatherDisplay info={weather} />
+   );
+    } else {
+      getWeather();
+      return "Loading..."
+    }
+  
 }
