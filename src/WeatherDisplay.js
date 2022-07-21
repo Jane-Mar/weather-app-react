@@ -2,41 +2,58 @@ import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMapPin, faClockRotateLeft, faCalendarCheck, faWind } from '@fortawesome/free-solid-svg-icons'
 
-import "./CurrentWeatherWrapper.css";
+import "./WeatherDisplay.css";
 
 export default function WeatherDisplay(props) {
-<div className="WeatherDisplay">
-<h1>
-  <FontAwesomeIcon icon={faMapPin} className="icon"/> {props.city}
-</h1>
+  let data = props.info.date;
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+ 
+  let hour = data.getHours();
+  if (hour<10) {hour = `0${hour}`};
 
+  let minutes = data.getMinutes();
+  if (minutes<10) {minutes = `0${minutes}`}
+
+  let day = data.getDate();
+  if (day<10) {day = `0${day}`}
+
+  
+  let month = data.getMonth();
+  if (month<10) {month = `0${month}`}
+
+
+  return (
+    <div className="WeatherDisplay">
+    <h1>
+  <FontAwesomeIcon icon={faMapPin} className="icon"/> {props.info.city}
+</h1>
 <div className="row">
   <div className="col-4">
     <ul>
       <li>
-        <FontAwesomeIcon icon={faClockRotateLeft} className="icon"/>{" "}
-        {props.day}, {props.time}
+        <FontAwesomeIcon icon={faClockRotateLeft} className="icon"/>{" "} {days[data.getDay()]}{" "}{hour}:{minutes}
       </li>
       <li>
-        <FontAwesomeIcon icon={faCalendarCheck} className="icon"/>{" "} {props.date}
+        <FontAwesomeIcon icon={faCalendarCheck} className="icon"/>{" "} {day}/{month}/{data.getFullYear()}
       </li>
       <li>
-        <FontAwesomeIcon icon={faWind} className="icon"/>{" "} {props.wind} m/s
+        <FontAwesomeIcon icon={faWind} className="icon"/>{" "} {props.info.wind} m/s
       </li>
     </ul>
   </div>
   <div className="col-4">
-    <img src={props.imageURL} alt={props.description} />
+    <img src={props.info.imageURL} alt={props.info.description} />
   </div>
   <div className="col-4">
     <div className="today-temp">
-      {props.temp}
+      {props.info.temp}
       <span className="units">
         <a href="/"> °C </a> | <a href="/"> °F </a>
       </span>
     </div>
   </div>
-  <div className="description">{props.description}</div>
+  <div className="description">{props.info.description}</div>
 </div>
 </div>
+);
 }
