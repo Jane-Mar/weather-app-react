@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import reportWebVitals from "./reportWebVitals";
 
-import "./Index.css";
+import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
 
 import CurrentWeatherWrapper from "./CurrentWeatherWrapper";
