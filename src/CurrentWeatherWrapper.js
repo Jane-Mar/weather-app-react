@@ -33,14 +33,12 @@ export default function CurrentWeatherWrapper(props) {
     axios.get(apiUrl).then(hendleResponse);
   }
 
-  function findCity(event) {
+  let findCity = (event) => {
     event.preventDefault();
     getWeather();
   }
 
-  function getCity(event) {
-    setCity(event.target.value);
-  }
+  let getCity = (event) => { setCity(event.target.value); }
 
   // function currentLocation(event) {
   //   setCity(event)

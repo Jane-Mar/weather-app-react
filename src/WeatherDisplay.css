@@ -50,10 +50,10 @@
   font-size: 18px;
   color: #804d3b;
   text-decoration: none;
-}
+ }
 
 .WeatherDisplay .units .active {
-  font-weight: bold;
+  font-weight: 800;
 }
 
 .WeatherDisplay a {

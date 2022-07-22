@@ -3,12 +3,12 @@ import React, { useState } from "react";
 export default function UnitConvertion(props) {
   const [unit, setUnit] = useState("celsius");
 
-  function toFahrenheit(event) {
+  let toFahrenheit = (event) => {
     event.preventDefault();
     setUnit("fahrenheit");
   }
 
-  function toCelsius(event) {
+  let toCelsius = (event) => {
     event.preventDefault();
     setUnit("celsius");
   }

@@ -16,24 +16,16 @@ export default function WeatherDisplay(props) {
   let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
   let hour = data.getHours();
-  if (hour < 10) {
-    hour = `0${hour}`;
-  }
+  hour = hour < 10 ? `0${hour}` : hour;
 
   let minutes = data.getMinutes();
-  if (minutes < 10) {
-    minutes = `0${minutes}`;
-  }
+  minutes = minutes < 10 ? `0${minutes}` : minutes;
 
   let day = data.getDate();
-  if (day < 10) {
-    day = `0${day}`;
-  }
+  day = day < 10 ? `0${day}` : day;
 
   let month = data.getMonth() + 1;
-  if (month < 10) {
-    month = `0${month}`;
-  }
+  month = month < 10 ? `0${month}` : month;
 
   return (
     <div className="WeatherDisplay">
