@@ -6,7 +6,6 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
 
 import CurrentWeatherWrapper from "./CurrentWeatherWrapper";
-import ForecastWrapper from "./ForecastWrapper";
 import Footer from "./Footer";
 
 function App() {
@@ -14,7 +13,6 @@ function App() {
     <div className="container">
       <div className="App">
         <CurrentWeatherWrapper defaultCity="Porto" />
-        <ForecastWrapper />
         <Footer />
       </div>
     </div>

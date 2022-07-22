@@ -1,28 +1,21 @@
 .ForecastWrapper {
-    border-radius: 15px;
-    box-shadow: 2px 2px 2px 2px #804d3b;
-    margin: 20px 0 10px;
-    padding: 10px;
-  }
-  
-  .forecast-day,
-  .forecast-temp {
-    text-align: center;
-    color: #804d3b;
-    font-size: 14px;
-  }
-  
-  .forecast-temp-day {
-    font-weight: bold;
-  }
-  
-  .forecast-temp-night {
-    opacity: 0.7;
-  }
-  
-  .forecast-image {
-    display: block;
-    margin: 0 auto;
-    max-width: 60px;
-  }
-  
+  border-radius: 15px;
+  box-shadow: 2px 2px 2px 2px #804d3b;
+  margin: 20px 0 10px;
+  padding: 10px;
+}
+
+.forecast-day,
+.forecast-temp {
+  text-align: center;
+  color: #804d3b;
+  font-size: 14px;
+}
+
+.forecast-temp-day {
+  font-weight: bold;
+}
+
+.forecast-temp-night {
+  opacity: 0.7;
+}

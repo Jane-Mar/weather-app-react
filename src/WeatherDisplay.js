@@ -50,7 +50,7 @@ export default function WeatherDisplay(props) {
           </ul>
         </div>
         <div className="col-4">
-          <WeatherImage code={props.info.imageCode} />
+          <WeatherImage code={props.info.imageCode} size={120} />
         </div>
         <div className="col-4">
           <div className="today-temp">

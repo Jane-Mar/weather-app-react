@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import axios from "axios";
 import WeatherDisplay from "./WeatherDisplay";
+import ForecastWrapper from "./ForecastWrapper";
 import "./SearchWrapper.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -18,6 +19,7 @@ export default function CurrentWeatherWrapper(props) {
   function hendleResponse(response) {
     setReady(true);
     setWeather({
+      coordinates: response.data.coord,
       city: response.data.name,
       date: new Date(response.data.dt * 1000),
       wind: Math.round(response.data.wind.speed),
@@ -36,9 +38,9 @@ export default function CurrentWeatherWrapper(props) {
   let findCity = (event) => {
     event.preventDefault();
     getWeather();
-  }
+  };
 
-  let getCity = (event) => { setCity(event.target.value); }
+  let getCity = (event) => setCity(event.target.value);
 
   // function currentLocation(event) {
   //   setCity(event)
@@ -65,6 +67,7 @@ export default function CurrentWeatherWrapper(props) {
           </form>
         </div>
         <WeatherDisplay info={weather} />
+        <ForecastWrapper info={weather} />
       </div>
     );
   } else {
