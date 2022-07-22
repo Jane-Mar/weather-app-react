@@ -9,7 +9,6 @@ import {
   faLocation,
   faMagnifyingGlassLocation,
 } from "@fortawesome/free-solid-svg-icons";
-import { Rings } from "react-loader-spinner";
 
 export default function CurrentWeatherWrapper(props) {
   const [weather, setWeather] = useState();
@@ -72,6 +71,8 @@ export default function CurrentWeatherWrapper(props) {
     );
   } else {
     getWeather();
-    return <Rings height="50" width="50" color="#1297bd" ariaLabel="loading" />;
+    <div className="text-center">
+      <div className="spinner-border text-info m-5" role="status"></div>
+    </div>;
   }
 }

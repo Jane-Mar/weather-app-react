@@ -13,8 +13,8 @@ export default function ForecastWrapper(props) {
             <WeatherImage code={props.info.imageCode} size={50} />
           </div>
           <div className="forecast-temp">
-            <span className="forecast-temp-day">20 °</span> /
-            <span className="forecast-temp-night">10°</span>
+            <span className="forecast-temp-day">20 °</span> /{" "}
+            <span className="forecast-temp-night opacity-75"> 10°</span>
           </div>
         </div>
         `;

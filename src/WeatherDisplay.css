@@ -41,7 +41,7 @@
 
 .WeatherDisplay canvas {
   display: block;
-  margin: 10px auto;
+  margin: 0 auto;
 }
 
 .WeatherDisplay .units {
