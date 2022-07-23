@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ForecastDay from "./ForecastDay";
 import axios from "axios";
 
@@ -12,6 +12,10 @@ export default function ForecastWrapper(props) {
     setReady(true);
     setForecast(response.data.daily);
   }
+
+  useEffect(() => {
+    setReady(false);
+  }, [props.info.coordinates]);
 
   function getWeather() {
     let lat = props.info.coordinates.lat;
@@ -28,10 +32,12 @@ export default function ForecastWrapper(props) {
           {forecast.map((dailyForecast, index) => {
             if (index < 6) {
               return (
-                <div className="col" key="index">
+                <div className="col" key={index}>
                   <ForecastDay info={dailyForecast} />
                 </div>
               );
+            } else {
+              return null;
             }
           })}
         </div>

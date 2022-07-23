@@ -8,7 +8,6 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 import WeatherImage from "./WeatherImage";
-import UnitConvertion from "./UnitConvertion";
 import "./WeatherDisplay.css";
 
 export default function WeatherDisplay(props) {
@@ -54,7 +53,8 @@ export default function WeatherDisplay(props) {
         </div>
         <div className="col-4">
           <div className="today-temp">
-            <UnitConvertion temp={props.info.temp} />
+            {props.info.temp}
+            <span className="units">°C </span>
           </div>
         </div>
         <div className="description">{props.info.description}</div>

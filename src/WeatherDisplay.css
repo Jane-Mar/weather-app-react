@@ -49,17 +49,6 @@
   top: -30px;
   font-size: 18px;
   color: #804d3b;
-  text-decoration: none;
-}
-
-.WeatherDisplay .units .active {
-  font-weight: 800;
-}
-
-.WeatherDisplay a {
-  color: #804d3b;
-  text-decoration: none;
-  font-weight: lighter;
 }
 
 .WeatherDisplay .description {
