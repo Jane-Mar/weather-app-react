@@ -71,8 +71,6 @@ export default function CurrentWeatherWrapper(props) {
     );
   } else {
     getWeather();
-    <div className="text-center">
-      <div className="spinner-border text-info m-5" role="status"></div>
-    </div>;
+    <div className="spinner-border text-info" role="status"></div>;
   }
 }

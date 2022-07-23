@@ -1,14 +1,16 @@
 import React, { useState } from "react";
-import WeatherImage from "./WeatherImage";
+import ForecastDay from "./ForecastDay";
 import axios from "axios";
 
 import "./ForecastWrapper.css";
 
 export default function ForecastWrapper(props) {
   const [ready, setReady] = useState(false);
+  const [forecast, setForecast] = useState();
 
-  function hendleResponse() {
+  function hendleResponse(response) {
     setReady(true);
+    setForecast(response.data.daily);
   }
 
   function getWeather() {
@@ -16,7 +18,6 @@ export default function ForecastWrapper(props) {
     let lon = props.info.coordinates.lon;
     let apiKey = "fff7fbe34f6b248c3ba3dfbbe41d297f";
     let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
-    console.log(apiUrl);
     axios.get(apiUrl).then(hendleResponse);
   }
 
@@ -24,16 +25,15 @@ export default function ForecastWrapper(props) {
     return (
       <div className="ForecastWrapper">
         <div className="row">
-          <div className="col">
-            <div className="forecast-day">Thu</div>
-            <div className="forecast-image text-center">
-              <WeatherImage code={props.info.imageCode} size={50} />
-            </div>
-            <div className="forecast-temp">
-              <span className="forecast-temp-day"> °</span> /{" "}
-              <span className="forecast-temp-night opacity-75"> 10°</span>
-            </div>
-          </div>
+          {forecast.map((dailyForecast, index) => {
+            if (index < 6) {
+              return (
+                <div className="col" key="index">
+                  <ForecastDay info={dailyForecast} />
+                </div>
+              );
+            }
+          })}
         </div>
       </div>
     );
