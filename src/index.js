@@ -1,17 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-import "./App.css";
+import "./WeatherApp.css";
 import "bootstrap/dist/css/bootstrap.css";
 
-import CurrentWeatherWrapper from "./App";
+import WeatherApp from "./WeatherApp";
 import Footer from "./Footer";
 
 function App() {
   return (
     <div className="container">
       <div className="App">
-        <CurrentWeatherWrapper defaultCity="Porto" />
+        <WeatherApp defaultCity="Porto" />
         <Footer />
       </div>
     </div>

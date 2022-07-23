@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-
 import axios from "axios";
+
 import WeatherDisplay from "./WeatherDisplay";
 import ForecastWrapper from "./ForecastWrapper";
 import "./SearchWrapper.css";
@@ -10,7 +10,7 @@ import {
   faMagnifyingGlassLocation,
 } from "@fortawesome/free-solid-svg-icons";
 
-export default function CurrentWeatherWrapper(props) {
+export default function WeatherApp(props) {
   const [weather, setWeather] = useState();
   const [ready, setReady] = useState(false);
   const [city, setCity] = useState(props.defaultCity);
@@ -42,7 +42,6 @@ export default function CurrentWeatherWrapper(props) {
   let getCity = (event) => setCity(event.target.value);
 
   function findLocation(position) {
-    console.log(position);
     let lon = position.coords.longitude;
     let lat = position.coords.latitude;
 
@@ -59,7 +58,7 @@ export default function CurrentWeatherWrapper(props) {
 
   if (ready) {
     return (
-      <div className="CurrentWeatherWrapper">
+      <div className="WeatherApp">
         <div className="SearchWrapper">
           <form onSubmit={findCity}>
             <input

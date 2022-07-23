@@ -12,7 +12,11 @@ import "./WeatherDisplay.css";
 
 export default function WeatherDisplay(props) {
   let data = props.info.date;
-  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  function currentDay() {
+    let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    return days[data.getDay()];
+  }
 
   let hour = data.getHours();
   hour = hour < 10 ? `0${hour}` : hour;
@@ -36,7 +40,7 @@ export default function WeatherDisplay(props) {
           <ul>
             <li>
               <FontAwesomeIcon icon={faClockRotateLeft} className="icon" />{" "}
-              {days[data.getDay()]} {hour}:{minutes}
+              {currentDay()} {hour}:{minutes}
             </li>
             <li>
               <FontAwesomeIcon icon={faCalendarCheck} className="icon" /> {day}/
