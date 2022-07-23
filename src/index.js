@@ -4,7 +4,7 @@ import ReactDOM from "react-dom/client";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
 
-import CurrentWeatherWrapper from "./CurrentWeatherWrapper";
+import CurrentWeatherWrapper from "./App";
 import Footer from "./Footer";
 
 function App() {

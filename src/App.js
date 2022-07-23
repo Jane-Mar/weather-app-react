@@ -41,9 +41,21 @@ export default function CurrentWeatherWrapper(props) {
 
   let getCity = (event) => setCity(event.target.value);
 
-  // function currentLocation(event) {
-  //   setCity(event)
-  // }
+  function findLocation(position) {
+    console.log(position);
+    let lon = position.coords.longitude;
+    let lat = position.coords.latitude;
+
+    let apiKey = "fff7fbe34f6b248c3ba3dfbbe41d297f";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+
+    axios.get(apiUrl).then(hendleResponse);
+  }
+
+  function currentPosition(event) {
+    event.preventDefault();
+    navigator.geolocation.getCurrentPosition(findLocation);
+  }
 
   if (ready) {
     return (
@@ -61,7 +73,7 @@ export default function CurrentWeatherWrapper(props) {
               <FontAwesomeIcon icon={faMagnifyingGlassLocation} />
             </button>
             <button className="location-btn" type="submit">
-              <FontAwesomeIcon icon={faLocation} />
+              <FontAwesomeIcon icon={faLocation} onClick={currentPosition} />
             </button>
           </form>
         </div>
